@@ -19,10 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.textView = [[JVTNextGrowingTextView alloc] initWithFrame:CGRectMake(100, 100, 200, 35)];
+    self.textView = [[JVTNextGrowingTextView alloc] initWithFrame:CGRectMake(100, 100, 200, 27.5)];
     self.textView.backgroundColor = [UIColor grayColor];
-    self.textView.maxHeight = 300;
-    self.textView.placeholderAttributedText = [[NSAttributedString alloc] initWithString:@"Hello!"];
+    self.textView.font = [UIFont systemFontOfSize:18 weight:UIFontWeightRegular];
+    self.textView.textContainerInset = UIEdgeInsetsMake(2.5, 0, 3, 0);
+    self.textView.placeholderAttributedText = [self placeHolder];    
     [self.view addSubview:self.textView];
     
     [self.textView setViewHorizontalEdgesEquelToViewHorizintalEdges:self.view padding:30 priority:600];
@@ -30,9 +31,12 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSAttributedString *) placeHolder {
+    UIFont *systemFont = [UIFont systemFontOfSize:18.0f];
+    NSDictionary * fontAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:systemFont, NSFontAttributeName, nil];
+    NSMutableAttributedString *libTitle = [[NSMutableAttributedString alloc] initWithString:@"Library" attributes:fontAttributes];
+    
+    return libTitle;
 }
 
 @end

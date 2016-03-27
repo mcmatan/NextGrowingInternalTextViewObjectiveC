@@ -12,46 +12,63 @@
 @implementation JVTNextGrowingTextView (UITextViewDelegate)
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if (!self.delegates) {
+    if (!self.delegates || ![self.delegates respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)]) {
         return YES;
     }
     return [self.delegates textView:textView shouldChangeTextInRange:range replacementText:text];
 }
 
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
-    return [self.delegates textView:textView shouldInteractWithURL:URL inRange:characterRange];
+    if ([self.delegates textView:textView shouldInteractWithURL:URL inRange:characterRange]) {
+            return [self.delegates textView:textView shouldInteractWithURL:URL inRange:characterRange];
+    } else {
+        return NO;
+    }
 }
 
 - (BOOL)textView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange {
-    return [self.delegates textView:textView shouldInteractWithTextAttachment:textAttachment inRange:characterRange];
+    if ([self.delegates textView:textView shouldInteractWithTextAttachment:textAttachment inRange:characterRange]) {
+            return [self.delegates textView:textView shouldInteractWithTextAttachment:textAttachment inRange:characterRange];
+    } else {
+        return NO;
+    }
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    return [self.delegates textViewDidBeginEditing:textView];
+    if (self.delegates && [self.delegates respondsToSelector:@selector(textViewDidBeginEditing:)]) {
+            return [self.delegates textViewDidBeginEditing:textView];
+    }
 }
 
 - (void)textViewDidChangeSelection:(UITextView *)textView {
-    return [self.delegates textViewDidChangeSelection:textView];
+    if (self.delegates && [self.delegates respondsToSelector:@selector(textViewDidChangeSelection:)]) {
+            return [self.delegates textViewDidChangeSelection:textView];
+    }
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
-    return [self.delegates textViewDidEndEditing:textView];
+    if (self.delegates && [self.delegates respondsToSelector:@selector(textViewDidEndEditing:)]) {
+            return [self.delegates textViewDidEndEditing:textView];
+    }
 }
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    if (!self.delegates) {
+    if (!self.delegates || ![self.delegates respondsToSelector:@selector(textViewShouldBeginEditing:)]) {
         return YES;
     }
     return [self.delegates textViewShouldBeginEditing:textView];
 }
 
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView {
-    return [self.delegates textViewShouldEndEditing:textView];
+    if (self.delegates && [self.delegates respondsToSelector:@selector(textViewShouldBeginEditing:)]) {
+                    return [self.delegates textViewShouldEndEditing:textView];
+    } else {
+        return YES;
+    }
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
     [self.delegates textViewDidChange:textView];
-    
     [self fitToScrollView];
 }
 

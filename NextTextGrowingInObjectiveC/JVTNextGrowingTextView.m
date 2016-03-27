@@ -17,6 +17,29 @@
 
 }
 
+@synthesize allowsEditingTextAttributes = _allowsEditingTextAttributes;
+@synthesize placeholderAttributedText = _placeholderAttributedText;
+@synthesize text = _text;
+@synthesize font = _font;
+@synthesize textColor = _textColor;
+@synthesize textAlignment = _textAlignment;
+@synthesize selectedRange = _selectedRange;
+@synthesize dataDetectorTypes = _dataDetectorTypes;
+@synthesize selectable = _selectable;
+@synthesize attributedText = _attributedText;
+@synthesize typingAttributes = _typingAttributes;
+@synthesize scrollRangeToVisible = _scrollRangeToVisible;
+@synthesize textViewInputView = _textViewInputView;
+@synthesize textViewInputAccessoryView = _textViewInputAccessoryView;
+@synthesize clearsOnInsertion = _clearsOnInsertion;
+@synthesize textContainer = _textContainer;
+@synthesize textContainerInset = _textContainerInset;
+@synthesize layoutManger = _layoutManger;
+@synthesize textStorage = _textStorage;
+@synthesize linkTextAttributes = _linkTextAttributes;
+
+
+
 -(instancetype) initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -144,7 +167,9 @@
     
     if (oldScrollViewFrame.size.height != newScrollViewFrame.size.height && newScrollViewFrame.size.height <= self.maxHeight) {
         [self flashScrollIndicators];
-        [self.delegates willChangeHeight:newScrollViewFrame.size.height];
+        if (self.delegates && [self.delegates respondsToSelector:@selector(willChangeHeight:)]) {
+                    [self.delegates willChangeHeight:newScrollViewFrame.size.height];
+        }
     }
     
     self.frame = newScrollViewFrame;
@@ -153,7 +178,9 @@
         [self scrollToBottom];
     }
     
-    [self.delegates didChangeHeight:self.frame.size.height];
+    if (self.delegates && [self.delegates respondsToSelector:@selector(didChangeHeight:)]) {
+            [self.delegates didChangeHeight:self.frame.size.height];
+    }
     
     [self invalidateIntrinsicContentSize];
     
@@ -196,7 +223,7 @@
     self.textView.placeholderAttributedText = placeholderAttributedText;
 }
 
--(NSAttributedString *)placeholderAttributedText {
+-(NSAttributedString *)getPlaceholderAttributedText {
     return self.textView.placeholderAttributedText;
 }
 
@@ -205,11 +232,11 @@
     [self fitToScrollView];
 }
 
--(NSString *) text {
+-(NSString *) getText {
     return self.textView.text;
 }
 
--(UIFont *) font {
+-(UIFont *) getFont {
     return self.textView.font;
 }
 
@@ -221,11 +248,11 @@
     self.textView.textColor = textColor;
 }
 
--(UIColor *) textColor {
+-(UIColor *) getTextColor {
     return self.textView.textColor;
 }
 
--(NSTextAlignment) textAlignment {
+-(NSTextAlignment) getTextAlignment {
     return self.textView.textAlignment;
 }
 
@@ -237,7 +264,7 @@
     self.textView.selectedRange = selectedRange;
 }
 
--(NSRange) selectedRange {
+-(NSRange) getSelectedRange {
     return self.textView.selectedRange;
 }
 
@@ -245,7 +272,7 @@
     self.textView.dataDetectorTypes = dataDetectorTypes;
 }
 
--(UIDataDetectorTypes) dataDetectorTypes {
+-(UIDataDetectorTypes) getDataDetectorTypes {
     return self.textView.dataDetectorTypes;
 }
 
@@ -253,7 +280,7 @@
     self.textView.selectable = selectable;
 }
 
--(BOOL) selectable {
+-(BOOL) getSelectable {
     return self.textView.selectable;
 }
 
@@ -261,7 +288,7 @@
     _allowsEditingTextAttributes = allowsEditingTextAttributes;
 }
 
--(BOOL)allowsEditingTextAttributes {
+-(BOOL)getAllowsEditingTextAttributes {
     return self.allowsEditingTextAttributes;
 }
 
@@ -270,7 +297,7 @@
     [self fitToScrollView];
 }
 
--(NSAttributedString *) attributedText {
+-(NSAttributedString *) getAttributedText {
     return self.textView.attributedText;
 }
 
@@ -278,7 +305,7 @@
     _typingAttributes = typingAttributes;
 }
 
--(NSDictionary *) typingAttributes {
+-(NSDictionary *) getTypingAttributes {
     return _typingAttributes;
 }
 
@@ -290,7 +317,7 @@
     self.textView.inputView = textViewInputView;
 }
 
--(UIView *)textViewInputView {
+-(UIView *)getTextViewInputView {
     return self.textView.inputView;
 }
 
@@ -298,34 +325,34 @@
     self.textView.inputAccessoryView = textViewInputAccessoryView;
 }
 
--(UIView *)textViewInputAccessoryView {
+-(UIView *)getTextViewInputAccessoryView {
    return self.textView.inputAccessoryView;
 }
 
 -(void)setClearsOnInsertion:(BOOL)clearsOnInsertion {
     self.textView.clearsOnInsertion = clearsOnInsertion;
 }
--(BOOL) clearsOnInsertion {
+-(BOOL) getClearsOnInsertion {
     return self.textView.clearsOnInsertion;
 }
 
--(NSTextContainer *) textContainer {
+-(NSTextContainer *) getTextContainer {
     return self.textView.textContainer;
 }
 
--(void)setTextContainerInse:(UIEdgeInsets)textContainerInset {
+-(void)setTextContainerInset:(UIEdgeInsets)textContainerInset {
     self.textView.textContainerInset = textContainerInset;
 }
 
--(UIEdgeInsets) textContainerInse {
+-(UIEdgeInsets) getTextContainerInset {
     return self.textView.textContainerInset;
 }
 
--(NSLayoutManager *) layoutManger {
+-(NSLayoutManager *) getLayoutManger {
     return self.textView.layoutManager;
 }
 
--(NSTextStorage *) textStorage {
+-(NSTextStorage *) getTextStorage {
     return self.textView.textStorage;
 }
 
@@ -333,7 +360,7 @@
     self.textView.linkTextAttributes = linkTextAttributes;
 }
 
--(NSDictionary  *) linkTextAttributes {
+-(NSDictionary  *) getLinkTextAttributes {
     return self.textView.linkTextAttributes;
 }
 

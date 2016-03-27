@@ -6,7 +6,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
 @interface JVTNextGrowingInternalTextView : UITextView
 @property (nonatomic, strong) NSAttributedString * placeholderAttributedText;
 @property (nonatomic, assign) BOOL displayPlaceholder;

@@ -15,10 +15,10 @@
 		EDD597691CA437F10082E361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD597671CA437F10082E361 /* LaunchScreen.storyboard */; };
 		EDD597741CA437F10082E361 /* NextTextGrowingInObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597731CA437F10082E361 /* NextTextGrowingInObjectiveCTests.m */; };
 		EDD5977F1CA437F10082E361 /* NextTextGrowingInObjectiveCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5977E1CA437F10082E361 /* NextTextGrowingInObjectiveCUITests.m */; };
-		EDD597931CA4380A0082E361 /* JVTNextGrowingInternalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978E1CA4380A0082E361 /* JVTNextGrowingInternalTextView.m */; };
-		EDD597941CA4380A0082E361 /* JVTNextGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597901CA4380A0082E361 /* JVTNextGrowingTextView.m */; };
-		EDD597951CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597921CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m */; };
 		EDD597981CA43A290082E361 /* UIView+JVTAutoLayoutTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597971CA43A290082E361 /* UIView+JVTAutoLayoutTools.m */; };
+		EDD597A91CA809D30082E361 /* JVTNextGrowingInternalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597A41CA809D30082E361 /* JVTNextGrowingInternalTextView.m */; };
+		EDD597AA1CA809D30082E361 /* JVTNextGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597A61CA809D30082E361 /* JVTNextGrowingTextView.m */; };
+		EDD597AB1CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597A81CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +55,14 @@
 		EDD5977A1CA437F10082E361 /* NextTextGrowingInObjectiveCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTextGrowingInObjectiveCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD5977E1CA437F10082E361 /* NextTextGrowingInObjectiveCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextTextGrowingInObjectiveCUITests.m; sourceTree = "<group>"; };
 		EDD597801CA437F10082E361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDD5978D1CA4380A0082E361 /* JVTNextGrowingInternalTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVTNextGrowingInternalTextView.h; sourceTree = "<group>"; };
-		EDD5978E1CA4380A0082E361 /* JVTNextGrowingInternalTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVTNextGrowingInternalTextView.m; sourceTree = "<group>"; };
-		EDD5978F1CA4380A0082E361 /* JVTNextGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVTNextGrowingTextView.h; sourceTree = "<group>"; };
-		EDD597901CA4380A0082E361 /* JVTNextGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVTNextGrowingTextView.m; sourceTree = "<group>"; };
-		EDD597911CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.h"; sourceTree = "<group>"; };
-		EDD597921CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m"; sourceTree = "<group>"; };
 		EDD597961CA43A290082E361 /* UIView+JVTAutoLayoutTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JVTAutoLayoutTools.h"; sourceTree = "<group>"; };
 		EDD597971CA43A290082E361 /* UIView+JVTAutoLayoutTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JVTAutoLayoutTools.m"; sourceTree = "<group>"; };
+		EDD597A31CA809D30082E361 /* JVTNextGrowingInternalTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVTNextGrowingInternalTextView.h; sourceTree = "<group>"; };
+		EDD597A41CA809D30082E361 /* JVTNextGrowingInternalTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVTNextGrowingInternalTextView.m; sourceTree = "<group>"; };
+		EDD597A51CA809D30082E361 /* JVTNextGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVTNextGrowingTextView.h; sourceTree = "<group>"; };
+		EDD597A61CA809D30082E361 /* JVTNextGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVTNextGrowingTextView.m; sourceTree = "<group>"; };
+		EDD597A71CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.h"; sourceTree = "<group>"; };
+		EDD597A81CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,12 +158,12 @@
 		EDD5978C1CA437FA0082E361 /* JVTNextGrowingTextView */ = {
 			isa = PBXGroup;
 			children = (
-				EDD5978D1CA4380A0082E361 /* JVTNextGrowingInternalTextView.h */,
-				EDD5978E1CA4380A0082E361 /* JVTNextGrowingInternalTextView.m */,
-				EDD5978F1CA4380A0082E361 /* JVTNextGrowingTextView.h */,
-				EDD597901CA4380A0082E361 /* JVTNextGrowingTextView.m */,
-				EDD597911CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.h */,
-				EDD597921CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m */,
+				EDD597A31CA809D30082E361 /* JVTNextGrowingInternalTextView.h */,
+				EDD597A41CA809D30082E361 /* JVTNextGrowingInternalTextView.m */,
+				EDD597A51CA809D30082E361 /* JVTNextGrowingTextView.h */,
+				EDD597A61CA809D30082E361 /* JVTNextGrowingTextView.m */,
+				EDD597A71CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.h */,
+				EDD597A81CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m */,
 			);
 			name = JVTNextGrowingTextView;
 			sourceTree = "<group>";
@@ -298,12 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD597931CA4380A0082E361 /* JVTNextGrowingInternalTextView.m in Sources */,
 				EDD597611CA437F10082E361 /* ViewController.m in Sources */,
+				EDD597A91CA809D30082E361 /* JVTNextGrowingInternalTextView.m in Sources */,
 				EDD5975E1CA437F10082E361 /* AppDelegate.m in Sources */,
-				EDD597951CA4380A0082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m in Sources */,
+				EDD597AA1CA809D30082E361 /* JVTNextGrowingTextView.m in Sources */,
+				EDD597AB1CA809D30082E361 /* UITextViewDelegate+JVTNextGrowingTextViewTextViewDelegateExntention.m in Sources */,
 				EDD5975B1CA437F10082E361 /* main.m in Sources */,
-				EDD597941CA4380A0082E361 /* JVTNextGrowingTextView.m in Sources */,
 				EDD597981CA43A290082E361 /* UIView+JVTAutoLayoutTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

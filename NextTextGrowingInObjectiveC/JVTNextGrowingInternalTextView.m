@@ -44,7 +44,10 @@
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         paragraphStyle.alignment = self.textAlignment;
 
-        CGRect targetRect = CGRectMake(5, 8 + self.contentInset.top, self.frame.size.width - self.contentInset.left, self.frame.size.height - self.contentInset.top);
+//        CGRect targetRect = CGRectMake(5, 8 + self.contentInset.top, self.frame.size.width - self.contentInset.left, self.frame.size.height - self.contentInset.top);
+
+        //MC CHANGE
+        CGRect targetRect = CGRectMake(5, self.textContainerInset.top, self.frame.size.width - self.contentInset.left, self.frame.size.height - self.contentInset.top);
 
         NSAttributedString *attributedString = self.placeholderAttributedText;
         [attributedString drawInRect:targetRect];
